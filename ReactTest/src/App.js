@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Beverage } from './Beverage';
 
 export default class App extends Component {
     static displayName = App.name;
@@ -43,10 +45,11 @@ export default class App extends Component {
             : App.renderForecastsTable(this.state.forecasts);
 
         return (
-            <div>
-                <h1 id="tabelLabel" >Weather forecast</h1>
+            <div className='container mt-4'>
+                <h1 id="tabelLabel" > <FontAwesomeIcon icon='wind'/>  Weather forecast</h1>
                 <p>This component demonstrates fetching data from the server.</p>
                 {contents}
+                <Beverage/>
             </div>
         );
     }
